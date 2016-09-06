@@ -1,5 +1,4 @@
-package com.example.terp.abcwear;
-
+package com.example.terp.irmawear;
 import android.os.Bundle;
 import android.support.wearable.activity.WearableActivity;
 import android.support.wearable.view.BoxInsetLayout;

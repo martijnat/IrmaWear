@@ -12,7 +12,7 @@
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="AbcWear v165"
+        android:text="AbcWear v166"
         app:layout_box="all" />
 
     <TextView
