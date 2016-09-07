@@ -5,14 +5,14 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.terp.abcwear.MainActivity"
+    tools:context="com.example.terp.irmawear.MainActivity"
     tools:deviceIds="wear">
 
     <TextView
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="AbcWear v166"
+        android:text="AbcWear v173"
         app:layout_box="all" />
 
     <TextView
