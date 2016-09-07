@@ -24,9 +24,25 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    //to fix irma imports
+    buildTypes.all { type ->
+        // ACRA configuration, disabled by default. Override in acra.cradle
+        type.buildConfigField "String", "acraServer", '""'
+        type.buildConfigField "String", "acraLogin", '""'
+        type.buildConfigField "String", "acraPassword", '""'
+        type.buildConfigField "org.acra.ReportingInteractionMode", "acraMode", "org.acra.ReportingInteractionMode.SILENT"
+        type.resValue "string", "crash_toast_text", ""
+        type.buildConfigField "String", "metricServer", '"https://demo.irmacard.org/tomcat/irma_metrics_server/api/v1"'
+
+        // Self enroll server
+        type.buildConfigField "String", "enrollServer", '"https://demo.irmacard.org/tomcat/irma_mno_server/api"'
+    }
+
     buildTypes {
         release {
             minifyEnabled false
+            buildConfigField "String", "metricServer", '"https://demo.irmacard.org/tomcat/irma_metrics_server/api/v1"'
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:id="@+id/detail_credential_attribute"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical" >-->
+
+    <!--<CheckedTextView-->
+        <!--android:id="@+id/detail_attribute_value"-->
+        <!--style="?android:attr/spinnerDropDownItemStyle"-->
+        <!--android:checkMark="?android:attr/listChoiceIndicatorSingle"-->
+        <!--android:text="Credential - attribute\nValue"-->
+        <!--android:layout_height="40sp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:paddingRight="10sp"-->
+        <!--android:paddingLeft="10sp"-->
+        <!--android:textSize="14sp"-->
+        <!--android:minLines="2"-->
+            <!--/>-->
+
+<!--</LinearLayout>-->
+<layout>
+    <!--Empty-->
+</layout>
