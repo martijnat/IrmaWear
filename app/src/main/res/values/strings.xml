@@ -2,7 +2,7 @@
     <string name="app_name">IrmaWear</string>
     <string name="app_name_enroll">IrmaWear Enrollment</string>
     <string name="hello_world">Hello World!</string>
-    <string name="irmaWearVersion">IrmaWear 182</string>
+    <string name="irmaWearVersion">IrmaWear 183</string>
     <string name="menu_settings">Settings</string>
     <string name="menu_reset">Load demo card</string>
     <string name="irmalogo">IRMA logo</string>
