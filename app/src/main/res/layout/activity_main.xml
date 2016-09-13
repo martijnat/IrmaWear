@@ -279,21 +279,7 @@
             android:textSize="16sp"
             android:gravity="center"
             android:visibility="gone"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/no_credentials"
-            android:id="@+id/activity_main"
-            android:layout_alignTop="@+id/listView"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/irmadarkblue"
-            android:textSize="16sp"
-            android:gravity="center"
-            android:visibility="gone"/>
+
 
     </LinearLayout>
 
