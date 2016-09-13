@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.wearable.view.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/irmadarkblue"
+    tools:context="com.example.terp.irmawear.MainActivity"
+    tools:deviceIds="wear">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/irmaWearVersion"
+        app:layout_box="all" />
+
+    <TextView
+        android:id="@+id/clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:textColor="@android:color/white"
+        app:layout_box="all" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/button"
+        android:layout_below="@+id/textView"
+        android:layout_toLeftOf="@+id/button2"
+        android:layout_toStartOf="@+id/button2"
+        android:layout_marginTop="70dp"
+        android:onClick="Click0"
+        android:layout_marginLeft="50dp"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:id="@+id/button2"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_marginTop="70dp"
+        android:onClick="Click1"
+        android:layout_marginLeft="100dp"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\?"
+        android:id="@+id/button3"
+        android:layout_below="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginTop="70dp"
+        android:onClick="ClickQuestion"
+        android:layout_marginLeft="150dp"/>
+
+    <ImageView
+        android:id="@+id/mainshape"
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="31dp"
+        android:layout_marginRight="31dp"
+        android:layout_marginTop="46dp"
+        android:src="@drawable/whiteshaperounded"
+        android:onClick="onMainShapeTouch"/>
+
+    <ImageView
+        android:id="@+id/irmaLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/irmalogo"
+        android:src="@drawable/irma_logo_150" />
+
+    <TextView
+        android:id="@+id/status_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/statusimage"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="@string/credential_info"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/irmadarkblue"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/feedback_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/status_text"
+        android:layout_below="@+id/status_text"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/irmadarkblue"
+        android:text="Status message"
+        android:textSize="14sp"
+        android:textIsSelectable="true" />
+
+
+    <ImageView
+        android:id="@+id/statusimage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="55dp"
+        android:layout_marginRight="40dp"
+        android:src="@drawable/irma_icon_place_card_520px" />
+
+    <TextView
+        android:id="@+id/credential_list_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Credentials"
+        android:textSize="16sp"
+        android:textColor="@color/zxing_status_text"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="31dp"
+        android:layout_below="@id/mainshape"/>
+
+    <ImageView
+        android:id="@+id/listshape"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/credential_list_header"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginRight="31dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/whiteshaperounded" />
+
+    <ExpandableListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView"
+        android:layout_alignTop="@+id/listshape"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="false"
+        android:longClickable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_credentials"
+        android:id="@+id/no_credentials_text"
+        android:layout_alignTop="@+id/listView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/irmadarkblue"
+        android:textSize="16sp"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/no_credentials_text"
+        android:gravity="center">
+
+        <Button
+            style="@style/Irma.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enroll"
+            android:id="@+id/enroll_button"
+            android:layout_marginTop="15dp"
+            android:onClick="onEnrollButtonTouch"
+            android:layout_marginRight="10sp"
+            android:paddingLeft="10sp"
+            android:paddingRight="10sp"/>
+
+        <Button
+            style="@style/Irma.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/online_enroll"
+            android:id="@+id/online_enroll_button"
+            android:layout_marginTop="15dp"
+            android:onClick="onOnlineEnrollButtonTouch"
+            android:paddingLeft="10sp"
+            android:paddingRight="10sp"/>
+
+        <!--Invisible buttons-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_credentials"
+            android:id="@+id/preferences"
+            android:layout_alignTop="@+id/listView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/irmadarkblue"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:visibility="gone"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_credentials"
+            android:id="@+id/enroll"
+            android:layout_alignTop="@+id/listView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/irmadarkblue"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:visibility="gone"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_credentials"
+            android:id="@+id/online_enroll"
+            android:layout_alignTop="@+id/listView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/irmadarkblue"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:visibility="gone"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_credentials"
+            android:id="@+id/show_card_log"
+            android:layout_alignTop="@+id/listView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/irmadarkblue"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:visibility="gone"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_credentials"
+            android:id="@+id/menu_clear"
+            android:layout_alignTop="@+id/listView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/irmadarkblue"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:visibility="gone"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_credentials"
+            android:id="@+id/activity_main"
+            android:layout_alignTop="@+id/listView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/irmadarkblue"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+    <!--<ImageView-->
+    <!--android:id="@+id/mainshape"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="130dp"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_marginLeft="61dp"-->
+    <!--android:layout_marginRight="61dp"-->
+    <!--android:layout_marginTop="70dp"-->
+    <!--android:src="@drawable/whiteshaperounded"-->
+    <!--android:onClick="onMainShapeTouch"/>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/irmaLogo"-->
+    <!--android:layout_width="150dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginTop="11dp"-->
+    <!--android:contentDescription="@string/irmalogo"-->
+    <!--android:src="@drawable/irma_logo_300" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/status_text"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_toLeftOf="@id/statusimage"-->
+    <!--android:layout_marginTop="95dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/credential_info"-->
+    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+    <!--android:textColor="@color/irmadarkblue"-->
+    <!--android:textSize="32sp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/feedback_text"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignRight="@+id/status_text"-->
+    <!--android:layout_below="@+id/status_text"-->
+    <!--android:paddingTop="5sp"-->
+    <!--android:gravity="left"-->
+    <!--android:text="Status message"-->
+    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+    <!--android:textColor="@color/irmadarkblue"-->
+    <!--android:textSize="24sp" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/statusimage"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="100dp"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_marginTop="85dp"-->
+    <!--android:layout_marginRight="75dp"-->
+    <!--android:src="@drawable/irma_icon_place_card_520px" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/credential_list_header"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Credentials"-->
+    <!--android:textSize="24sp"-->
+    <!--android:textColor="@color/zxing_status_text"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:layout_marginLeft="61dp"-->
+    <!--android:layout_below="@id/mainshape"/>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/listshape"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_below="@id/credential_list_header"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_marginTop="2dp"-->
+    <!--android:layout_marginLeft="61dp"-->
+    <!--android:layout_marginRight="61dp"-->
+    <!--android:layout_marginBottom="20dp"-->
+    <!--android:src="@drawable/whiteshaperounded" />-->
+
+    <!--<ExpandableListView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:id="@+id/listView"-->
+    <!--android:layout_alignTop="@+id/listshape"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_marginLeft="70dp"-->
+    <!--android:layout_marginRight="70dp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:layout_marginBottom="30dp"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/no_credentials"-->
+    <!--android:id="@+id/no_credentials_text"-->
+    <!--android:layout_alignTop="@+id/listView"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:layout_marginLeft="40dp"-->
+    <!--android:layout_marginRight="40dp"-->
+    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+    <!--android:textColor="@color/irmadarkblue"-->
+    <!--android:textSize="20sp"-->
+    <!--android:gravity="center"/>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/no_credentials_text"-->
+    <!--android:gravity="center">-->
+
+    <!--<Button-->
+    <!--style="@style/Irma.Button"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/enroll"-->
+    <!--android:id="@+id/enroll_button"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:onClick="onEnrollButtonTouch"-->
+    <!--android:layout_marginRight="10sp"-->
+    <!--android:paddingLeft="10sp"-->
+    <!--android:paddingRight="10sp"/>-->
+
+    <!--<Button-->
+    <!--style="@style/Irma.Button"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/online_enroll"-->
+    <!--android:id="@+id/online_enroll_button"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:onClick="onOnlineEnrollButtonTouch"-->
+    <!--android:paddingLeft="10sp"-->
+    <!--android:paddingRight="10sp"/>-->
+
+    <!--</LinearLayout>-->
+
+</android.support.wearable.view.BoxInsetLayout>
