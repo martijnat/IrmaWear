@@ -1,4 +1,5 @@
 package com.example.terp.irmawear;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.wearable.activity.WearableActivity;
 import android.support.wearable.view.BoxInsetLayout;
@@ -83,6 +84,12 @@ public class MainActivity extends WearableActivity {
         mBackgroundConnection = new BackgroundConnection();
         mBackgroundConnection.SetABcGenerator(mProofGenerator);
         mBackgroundConnection.execute("Test","10.0.2.2");
+    }
+
+    public void ClickReview(View view) {
+        Toast.makeText(MainActivity.this, "Pressed (review)", Toast.LENGTH_SHORT).show();
+        Intent j = new Intent(MainActivity.this,ReviewCredentials.class);
+        startActivity(j);
     }
 
 
