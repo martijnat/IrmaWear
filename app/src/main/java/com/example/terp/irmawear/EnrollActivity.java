@@ -3,6 +3,7 @@ package com.example.terp.irmawear;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.wearable.view.WatchViewStub;
+import android.view.View;
 import android.widget.TextView;
 
 public class EnrollActivity extends Activity {
@@ -20,5 +21,11 @@ public class EnrollActivity extends Activity {
                 mTextView = (TextView) stub.findViewById(R.id.text);
             }
         });
+    }
+
+
+    public void DebugEnroll(View view) {
+        MainActivity activity = (MainActivity) MainActivity.activity;
+        activity.DebugEnroll(view);
     }
 }

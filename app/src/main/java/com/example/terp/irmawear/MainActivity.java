@@ -1,4 +1,5 @@
 package com.example.terp.irmawear;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.wearable.activity.WearableActivity;
@@ -27,6 +28,8 @@ public class MainActivity extends WearableActivity {
     private BackgroundConnection mBackgroundConnection;
     private Integer user_alpha;
 
+    public static Activity activity;
+
 
     // WARNING builtin rng CANNOT handle large numbers
     private Random rng = new Random();
@@ -53,6 +56,8 @@ public class MainActivity extends WearableActivity {
         setContentView(R.layout.activity_main);
         setAmbientEnabled();
 
+        activity = this; //Allow referencing
+
         mContainerView = (BoxInsetLayout) findViewById(R.id.container);
         mTextView = (TextView) findViewById(R.id.text);
         mClockView = (TextView) findViewById(R.id.clock);
@@ -62,6 +67,11 @@ public class MainActivity extends WearableActivity {
 
     // Real code starts here
     public void ClickObtain(View view) {
+        Intent j = new Intent(MainActivity.this,EnrollActivity.class);
+        startActivity(j);
+    }
+
+    public void DebugEnroll(View view) {
         Toast.makeText(MainActivity.this, "Pressed (0)", Toast.LENGTH_SHORT).show();
         Integer maxAlpha = customPow(2,bit_length);
         user_alpha = rng.nextInt(maxAlpha);
