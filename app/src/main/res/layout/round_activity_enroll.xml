@@ -29,6 +29,7 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="Document Enroll"
+            android:onClick="DocumentEnroll"
             android:layout_gravity="center"/>
 
         <Button

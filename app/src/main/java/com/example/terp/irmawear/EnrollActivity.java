@@ -23,6 +23,9 @@ public class EnrollActivity extends Activity {
         });
     }
 
+    public void DocumentEnroll(View view){
+        return;
+    }
 
     public void DebugEnroll(View view) {
         MainActivity activity = (MainActivity) MainActivity.activity;
