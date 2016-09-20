@@ -72,7 +72,6 @@ public class MainActivity extends WearableActivity {
     }
 
     public void DebugEnroll(View view) {
-        Toast.makeText(MainActivity.this, "Pressed (0)", Toast.LENGTH_SHORT).show();
         Integer maxAlpha = customPow(2,bit_length);
         user_alpha = rng.nextInt(maxAlpha);
 
