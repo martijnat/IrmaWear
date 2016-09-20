@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="Debug Disclose"
-            android:onClick="DebugEnroll"
+            android:onClick="DebugDisclose"
             android:layout_gravity="center"/>
 
     </LinearLayout>

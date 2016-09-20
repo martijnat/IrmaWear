@@ -71,7 +71,7 @@ public class MainActivity extends WearableActivity {
         startActivity(j);
     }
 
-    public void DebugEnroll(View view) {
+    public void DebugEnroll() {
         Integer maxAlpha = customPow(2,bit_length);
         user_alpha = rng.nextInt(maxAlpha);
 
@@ -81,12 +81,19 @@ public class MainActivity extends WearableActivity {
         mBackgroundConnection.execute("GetCredentials","10.0.2.2");
     }
 
-    public void Click1(View view) {
-        Toast.makeText(MainActivity.this, "Pressed (1)", Toast.LENGTH_SHORT).show();
+    public void DebugDisclose(){
         mBackgroundConnection = new BackgroundConnection();
         mBackgroundConnection.SetABcGenerator(mProofGenerator);
         mBackgroundConnection.execute("UseService","10.0.2.2");
     }
+
+
+    public void ClickDisclose(View view) {
+        Intent j = new Intent(MainActivity.this,DiscloseActivity.class);
+        startActivity(j);
+    }
+
+
 
     public void ClickQuestion(View view) {
         Toast.makeText(MainActivity.this, "Pressed (?) test", Toast.LENGTH_SHORT).show();
@@ -96,7 +103,6 @@ public class MainActivity extends WearableActivity {
     }
 
     public void ClickReview(View view) {
-        Toast.makeText(MainActivity.this, "Pressed (review)", Toast.LENGTH_SHORT).show();
         Intent j = new Intent(MainActivity.this,ReviewCredentials.class);
         startActivity(j);
     }

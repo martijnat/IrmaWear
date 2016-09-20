@@ -23,8 +23,8 @@ public class DiscloseActivity extends Activity {
         });
     }
 
-    public void DebugEnroll(View view) {
+    public void DebugDisclose(View view) {
         MainActivity activity = (MainActivity) MainActivity.activity;
-        activity.DebugEnroll(view);
+        activity.DebugDisclose();
     }
 }

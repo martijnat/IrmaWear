@@ -26,6 +26,6 @@ public class EnrollActivity extends Activity {
 
     public void DebugEnroll(View view) {
         MainActivity activity = (MainActivity) MainActivity.activity;
-        activity.DebugEnroll(view);
+        activity.DebugEnroll();
     }
 }
