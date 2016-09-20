@@ -61,7 +61,7 @@ public class MainActivity extends WearableActivity {
 
 
     // Real code starts here
-    public void Click0(View view) {
+    public void ClickObtain(View view) {
         Toast.makeText(MainActivity.this, "Pressed (0)", Toast.LENGTH_SHORT).show();
         Integer maxAlpha = customPow(2,bit_length);
         user_alpha = rng.nextInt(maxAlpha);

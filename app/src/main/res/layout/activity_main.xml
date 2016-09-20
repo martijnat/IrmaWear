@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="Obtain Credentials"
-        android:onClick="Click0"
+        android:onClick="ClickObtain"
         android:layout_gravity="center"/>
 
     <Button
