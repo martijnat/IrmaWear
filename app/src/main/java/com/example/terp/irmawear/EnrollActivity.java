@@ -1,6 +1,8 @@
 package com.example.terp.irmawear;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.wearable.view.WatchViewStub;
 import android.view.View;
@@ -9,6 +11,8 @@ import android.widget.TextView;
 public class EnrollActivity extends Activity {
 
     private TextView mTextView;
+
+    Boolean onlineEnrolling = false; // not used by set in the document enroll function
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +28,11 @@ public class EnrollActivity extends Activity {
     }
 
     public void DocumentEnroll(View view){
-        return;
-    }
+        onlineEnrolling = true;
+		Intent i = new Intent(Intent.ACTION_VIEW);
+		i.setData(Uri.parse("https://demo.irmacard.org/tomcat/irma_api_server/examples/issue-all.html"));
+		startActivity(i);
+	}
 
     public void DebugEnroll(View view) {
         MainActivity activity = (MainActivity) MainActivity.activity;
