@@ -5,8 +5,13 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.wearable.view.WatchViewStub;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.irmacard.cardemu.CredentialManager;
+import org.irmacard.cardemu.selfenrol.EnrollSelectActivity;
 
 public class EnrollActivity extends Activity {
 
@@ -27,12 +32,22 @@ public class EnrollActivity extends Activity {
         });
     }
 
-    public void DocumentEnroll(View view){
+    public void DemoEnroll(View view){
         onlineEnrolling = true;
 		Intent i = new Intent(Intent.ACTION_VIEW);
 		i.setData(Uri.parse("https://demo.irmacard.org/tomcat/irma_api_server/examples/issue-all.html"));
 		startActivity(i);
 	}
+
+    public void DocumentEnroll(View v){
+        Log.i("DocumentEnroll_debug ","1");
+        Intent i = new Intent(this, EnrollSelectActivity.class);
+        Log.i("DocumentEnroll_debug ","2");
+        CredentialManager.save();
+        Log.i("DocumentEnroll_debug ","3");
+		startActivityForResult(i, EnrollSelectActivity.EnrollSelectActivityCode);
+        Log.i("DocumentEnroll_debug ","4");
+    }
 
     public void DebugEnroll(View view) {
         MainActivity activity = (MainActivity) MainActivity.activity;
