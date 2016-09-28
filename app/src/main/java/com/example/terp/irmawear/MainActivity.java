@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.irmacard.cardemu.CredentialManager;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -61,6 +63,10 @@ public class MainActivity extends WearableActivity {
         mContainerView = (BoxInsetLayout) findViewById(R.id.container);
         mTextView = (TextView) findViewById(R.id.text);
         mClockView = (TextView) findViewById(R.id.clock);
+
+
+        // initialize credentialmanager, if this isn't done the program crashes later
+        CredentialManager.init(getSharedPreferences("cardemu", 0));
 
     }
 

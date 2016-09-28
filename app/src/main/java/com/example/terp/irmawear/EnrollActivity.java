@@ -41,10 +41,10 @@ public class EnrollActivity extends Activity {
 
     public void DocumentEnroll(View v){
         Intent i = new Intent(this, EnrollSelectActivity.class);
-        Log.i("DocumentEnroll_debug ","thing go wrong here");
         CredentialManager.save();
-        Log.i("DocumentEnroll_debug ","this debug message is not reached");
+        Log.i("---DEBUG--- ","Something goes wrong after this?");
         startActivityForResult(i, EnrollSelectActivity.EnrollSelectActivityCode);
+        Log.i("---DEBUG--- ","THIS IS NOT REACHED YET");
     }
 
     public void DebugEnroll(View view) {
