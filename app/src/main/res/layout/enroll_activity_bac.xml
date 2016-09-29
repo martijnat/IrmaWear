@@ -11,8 +11,8 @@
         android:layout_height="match_parent"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
-        android:paddingTop="100dp"
-        android:paddingBottom="60dp">
+        android:paddingTop="40dp"
+        android:paddingBottom="0dp">
 
         <TextView
             android:id="@+id/bac_title_textview"
@@ -22,7 +22,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/irmadarkblue"
             android:text="@string/enroll_enter_bac_title"
-            android:textSize="24sp"
+            android:textSize="12sp"
             android:textIsSelectable="true"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"/>
@@ -36,6 +36,7 @@
             android:textColor="@color/irmadarkblue"
             android:layout_below="@+id/bac_title_textview"
             android:layout_alignParentRight="true"
+            android:textSize="12sp"
             android:layout_alignParentEnd="true" />
         <Spinner
             android:id="@+id/bac_selector"
