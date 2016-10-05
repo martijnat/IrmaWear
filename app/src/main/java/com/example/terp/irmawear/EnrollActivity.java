@@ -42,9 +42,7 @@ public class EnrollActivity extends Activity {
     public void DocumentEnroll(View v){
         Intent i = new Intent(this, EnrollSelectActivity.class);
         CredentialManager.save();
-        Log.i("---DEBUG--- ","Something goes wrong after this?");
         startActivityForResult(i, EnrollSelectActivity.EnrollSelectActivityCode);
-        Log.i("---DEBUG--- ","THIS IS NOT REACHED YET");
     }
 
     public void DebugEnroll(View view) {
