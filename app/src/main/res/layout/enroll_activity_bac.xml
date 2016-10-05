@@ -35,8 +35,7 @@
             android:id="@+id/bac_desc_textview"
             android:textColor="@color/irmadarkblue"
             android:layout_below="@+id/bac_title_textview"
-            android:layout_alignParentRight="true"
-            android:textSize="11sp"
+            android:textSize="6sp"
             android:layout_alignParentEnd="true" />
         <Spinner
             android:id="@+id/bac_selector"
@@ -46,6 +45,7 @@
             android:layout_below="@+id/bac_desc_textview"
             android:layout_alignParentLeft="true"
             android:layout_marginTop="1dp"
+            android:textSize="6sp"
             android:spinnerMode="dropdown"/>
 
         <RelativeLayout
@@ -62,6 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/doc_nr_edittext"
+                android:textSize="6sp"
                 android:hint="Document number"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
@@ -76,6 +77,7 @@
                 android:inputType="date"
                 android:ems="10"
                 android:id="@+id/doe_edittext"
+                android:textSize="6sp"
                 android:hint="Date of expiry"
                 android:layout_below="@+id/dob_edittext"
                 android:layout_alignParentLeft="true"
@@ -90,6 +92,7 @@
                 android:inputType="date"
                 android:ems="10"
                 android:id="@+id/dob_edittext"
+                android:textSize="6sp"
                 android:hint="Date of birth"
                 android:layout_below="@+id/doc_nr_edittext"
                 android:layout_alignParentLeft="true"
@@ -173,11 +176,9 @@
             android:layout_height="wrap_content"
             android:text="@string/se_continue"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:enabled="true"
-            android:visibility="visible" />
-        
+            android:layout_centerHorizontal="true" />
+
+
 
     </RelativeLayout>
 
