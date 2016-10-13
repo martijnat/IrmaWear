@@ -9,9 +9,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="40dp"
-        android:paddingRight="40dp"
-        android:paddingTop="40dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="30dp"
         android:paddingBottom="0dp">
 
         <TextView
@@ -45,7 +45,7 @@
             android:layout_below="@+id/bac_desc_textview"
             android:layout_alignParentLeft="true"
             android:layout_marginTop="1dp"
-            android:textSize="6sp"
+            android:background="@color/irmadarkblue"
             android:spinnerMode="dropdown"/>
 
         <RelativeLayout
@@ -56,6 +56,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
+            android:background="@color/irmablue"
             android:visibility="visible">
 
             <EditText
@@ -63,6 +64,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/doc_nr_edittext"
                 android:textSize="6sp"
+                android:textColor="@color/irmadarkblue"
                 android:hint="Document number"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
@@ -78,6 +80,7 @@
                 android:ems="10"
                 android:id="@+id/doe_edittext"
                 android:textSize="6sp"
+                android:textColor="@color/irmadarkblue"
                 android:hint="Date of expiry"
                 android:layout_below="@+id/dob_edittext"
                 android:layout_alignParentLeft="true"
@@ -93,6 +96,7 @@
                 android:ems="10"
                 android:id="@+id/dob_edittext"
                 android:textSize="6sp"
+                android:textColor="@color/irmadarkblue"
                 android:hint="Date of birth"
                 android:layout_below="@+id/doc_nr_edittext"
                 android:layout_alignParentLeft="true"
@@ -125,8 +129,8 @@
 
             <ImageView
                 android:id="@+id/statusimage"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/irma_icon_place_card_520px" />
@@ -140,7 +144,7 @@
                 android:layout_marginLeft="10dp"
                 android:text="@string/status_idle"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="20sp" />
+                android:textSize="6sp" />
 
             <TextView
                 android:id="@+id/or"
