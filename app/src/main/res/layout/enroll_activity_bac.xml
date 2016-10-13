@@ -12,7 +12,7 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="30dp"
-        android:paddingBottom="0dp">
+        android:paddingBottom="40dp">
 
         <TextView
             android:id="@+id/bac_title_textview"
@@ -45,6 +45,7 @@
             android:layout_below="@+id/bac_desc_textview"
             android:layout_alignParentLeft="true"
             android:layout_marginTop="1dp"
+            android:textSize="6sp"
             android:background="@color/irmadarkblue"
             android:spinnerMode="dropdown"/>
 
@@ -56,7 +57,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:background="@color/irmablue"
+            android:background="@color/irmagrey"
             android:visibility="visible">
 
             <EditText
@@ -173,18 +174,19 @@
 
         </RelativeLayout>
 
-        <Button
-            style="@style/Irma.Button"
-            android:id="@+id/se_button_continue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/se_continue"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" />
 
 
 
     </RelativeLayout>
+
+    <Button
+        style="@style/Irma.Button"
+        android:id="@+id/se_button_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/se_continue"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
