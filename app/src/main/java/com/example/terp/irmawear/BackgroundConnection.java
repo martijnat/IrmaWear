@@ -1,6 +1,13 @@
 package com.example.terp.irmawear;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.util.Log;
+import android.widget.Toast;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
@@ -82,6 +89,7 @@ public class BackgroundConnection extends AsyncTask<String, Void, String>{
         }
         catch(Exception ex){
             //Handle exceptions
+            Log.i("Catch{","Something went wrong");
             ex.printStackTrace();
         }
         return use_case;

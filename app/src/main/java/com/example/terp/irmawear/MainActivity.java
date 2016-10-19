@@ -23,6 +23,7 @@ public class MainActivity extends WearableActivity {
     private BoxInsetLayout mContainerView;
     private TextView mTextView;
     private TextView mClockView;
+    public String server_ip = "213.124.166.34";
 
     public Integer bit_length = 8; // Update if neccesary
 
@@ -84,13 +85,13 @@ public class MainActivity extends WearableActivity {
         mBackgroundConnection = new BackgroundConnection();
         mBackgroundConnection.RegisterMainActivity(this);
         mBackgroundConnection.SetABcGenerator(mProofGenerator);
-        mBackgroundConnection.execute("GetCredentials","10.0.2.2");
+        mBackgroundConnection.execute("GetCredentials",server_ip);
     }
 
     public void DebugDisclose(){
         mBackgroundConnection = new BackgroundConnection();
         mBackgroundConnection.SetABcGenerator(mProofGenerator);
-        mBackgroundConnection.execute("UseService","10.0.2.2");
+        mBackgroundConnection.execute("UseService",server_ip);
     }
 
 
@@ -105,7 +106,7 @@ public class MainActivity extends WearableActivity {
         Toast.makeText(MainActivity.this, "Pressed (?) test", Toast.LENGTH_SHORT).show();
         mBackgroundConnection = new BackgroundConnection();
         mBackgroundConnection.SetABcGenerator(mProofGenerator);
-        mBackgroundConnection.execute("Test","10.0.2.2");
+        mBackgroundConnection.execute("Test",server_ip);
     }
 
     public void ClickReview(View view) {
