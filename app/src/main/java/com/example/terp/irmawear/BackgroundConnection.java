@@ -14,6 +14,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 import java.util.Random;
+import android.bluetooth.*;
 
 public class BackgroundConnection extends AsyncTask<String, Void, String>{
 
@@ -33,13 +34,21 @@ public class BackgroundConnection extends AsyncTask<String, Void, String>{
     protected String doInBackground(String... arguments) {
         String use_case = arguments[0];
         String ip = arguments[1];
+        BluetoothAdapter bluetooth = BluetoothAdapter.getDefaultAdapter();
+        if(bluetooth != null) {
+            Log.i("use_Case_debug","Bluetooth succes");}
+
         Log.i("use_Case_debug",use_case);
         try{
             // Creating new socket connection to the IP (first parameter) and its opened port (second parameter)
+            Log.i("Debug","1");
             Socket s = new Socket(ip, 8080);
             // Initialize output stream to write message to the socket stream
+            Log.i("Debug","2");
             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(s.getOutputStream()));
+            Log.i("Debug","3");
             BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
+            Log.i("Debug","4");
             if (use_case == "GetCredentials"){
                 out.write("USECASE getproof\n");
                 out.write("I want proof that I my age is over 18\n");

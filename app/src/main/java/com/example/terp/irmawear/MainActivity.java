@@ -23,7 +23,7 @@ public class MainActivity extends WearableActivity {
     private BoxInsetLayout mContainerView;
     private TextView mTextView;
     private TextView mClockView;
-    public String server_ip = "213.124.166.34";
+    public String server_ip = "192.168.12.1"; // default acces point from laptop
 
     public Integer bit_length = 8; // Update if neccesary
 
