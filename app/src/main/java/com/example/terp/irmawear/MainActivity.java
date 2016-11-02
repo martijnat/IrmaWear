@@ -8,12 +8,17 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.wearable.Wearable;
+
 import org.irmacard.cardemu.CredentialManager;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Random;
+
+import static com.google.android.gms.wearable.Wearable.API;
 
 public class MainActivity extends WearableActivity {
 
@@ -30,6 +35,8 @@ public class MainActivity extends WearableActivity {
     private AbcProofGenerator mProofGenerator = new AbcProofGenerator();
     private BackgroundConnection mBackgroundConnection;
     private Integer user_alpha;
+
+    public GoogleApiClient googleClient;
 
     public static Activity activity;
 
@@ -68,6 +75,7 @@ public class MainActivity extends WearableActivity {
 
         // initialize credentialmanager, if this isn't done the program crashes later
         CredentialManager.init(getSharedPreferences("cardemu", 0));
+
 
     }
 

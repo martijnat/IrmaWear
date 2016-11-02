@@ -267,7 +267,7 @@ public class EnrollSelectActivity extends AbstractGUIEnrollActivity {
         final EditText dateView = (EditText) v;
         final String name = v.getId() == R.id.dob_edittext ? "dob" : "doe";
         Long current = settings.getLong("enroll_bac_" + name, 0);
-
+        Log.i("date settings",current.toString());
         final Calendar c = Calendar.getInstance();
         if (current != 0)
             c.setTimeInMillis(current);

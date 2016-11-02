@@ -28,6 +28,7 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="(Scan QR)"
+            android:onClick="onQRButtonTouch"
             android:layout_gravity="center"/>
 
 

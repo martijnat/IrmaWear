@@ -42,7 +42,7 @@ public class BackgroundConnection extends AsyncTask<String, Void, String>{
         try{
             // Creating new socket connection to the IP (first parameter) and its opened port (second parameter)
             Log.i("Debug","1");
-            Socket s = new Socket(ip, 8080);
+            Socket s = new Socket(ip, 8080); // timeout happens after 2 minutes
             // Initialize output stream to write message to the socket stream
             Log.i("Debug","2");
             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(s.getOutputStream()));
