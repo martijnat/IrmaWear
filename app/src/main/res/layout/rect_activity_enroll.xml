@@ -37,8 +37,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
-            android:text="Demo Enroll (Online)"
-            android:onClick="DemoEnroll"
+            android:text="Enroll (Wifi Proxy)"
+            android:onClick="WifiEnroll"
             android:layout_gravity="center"/>
 
         <Button

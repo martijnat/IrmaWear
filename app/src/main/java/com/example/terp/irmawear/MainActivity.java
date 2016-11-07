@@ -86,6 +86,11 @@ public class MainActivity extends WearableActivity {
         startActivity(j);
     }
 
+    public void WifiEnroll(View view) {
+        Intent j = new Intent(MainActivity.this,WifiActivity.class);
+        startActivity(j);
+    }
+
     public void DebugEnroll() {
         Integer maxAlpha = customPow(2,bit_length);
         user_alpha = rng.nextInt(maxAlpha);

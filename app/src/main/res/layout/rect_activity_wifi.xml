@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.example.terp.irmawear.WifiActivity"
+    tools:deviceIds="wear_square">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/wearadress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="localhost"
+            app:layout_box="all"
+            android:layout_gravity="center"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Show IP"
+            android:layout_gravity="center"
+            android:onClick="ShowIP"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Get message"
+            android:layout_gravity="center"
+            android:onClick="getMessage"/>
+
+    </LinearLayout>
+
+</LinearLayout>

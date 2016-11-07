@@ -39,6 +39,11 @@ public class EnrollActivity extends Activity {
 		startActivity(i);
 	}
 
+    public void WifiEnroll(View view){
+        MainActivity activity = (MainActivity) MainActivity.activity;
+        activity.WifiEnroll(view);
+    }
+
     public void DocumentEnroll(View v){
         Intent i = new Intent(this, EnrollSelectActivity.class);
         CredentialManager.save();
